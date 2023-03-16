@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bayesian Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/migo.css">
+  </head>
+  <body>
+    <h1 class="title ">Bayesian Analysis calculator of a beta-binomial conjugate law</h1>
+    <form action="/" method="POST">
+      <div class="flex">
+          <div class="block"><h2 class="title">Prior - Beta</h2>
+              <div class="flex">
+                  <div class="mb-5">
+                      <label for="n1">Number of trials in first study:</label><br>
+                      <input type="number" id="n_trials_prior" name="n_trials_prior"><br>
+                  </div>
+                  <div class="mb-5">
+                      <label for="s1">Number of successes in first study:</label><br>
+                      <input type="number" id="n_successes_prior" name="n_successes_prior"><br>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <div class="block"><h2 class="title">Likelihood - Binomial</h2>
+              <div class="flex">
+                  <div class="mb-5">
+                      <label for="n2">Number of trials in second study:</label><br>
+                      <input type="number" id="n_trials_likelihood" name="n_trials_likelihood"><br>
+                  </div>
+                  <div class="mb-5">
+                      <label for="s2">Number of successes in second study:</label><br>
+                      <input type="number" id="n_successes_likelihood" name="n_successes_likelihood"><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <input class="submit" type="submit" value="Submit">
+    </form>
+    <h1 class="title">Bayesian Inference</h1>
+
+    <div class="container">
+        
+        <img src="{{ graph }}" alt="Bayesian Inference Plot">
+    </div>
+  </body>
+</html>
